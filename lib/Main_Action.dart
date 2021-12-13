@@ -39,7 +39,23 @@ class _MainActionState extends State<MainAction> {
                     color: extraColor,
                   ),
                 ),
-              )
+              ),
+              Padding(
+                padding: EdgeInsets.only(top: 14),
+                child: RaisedButton(
+                  padding: EdgeInsets.all(16),
+                    onPressed: (){},
+                  color: extraColor,
+                  child: Text(
+                    "Atualizar",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.w700,
+                      color: mainColor,
+                    ),
+                  ),
+                ),
+              ),
             ],
           ),
         ),
