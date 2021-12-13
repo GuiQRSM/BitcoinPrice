@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MainAction extends StatefulWidget {
@@ -13,14 +14,19 @@ class _MainActionState extends State<MainAction> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white70,
+      backgroundColor: Colors.white60,
       body: Container(
         width: double.infinity,
         child: SingleChildScrollView(
           padding: EdgeInsets.all(28),
           child: Column(
             children: <Widget>[
-
+              Padding(
+                  padding: EdgeInsets.only(top:23),
+                child: Image.asset(
+                    "",
+                ),
+              )
             ],
           ),
         ),
