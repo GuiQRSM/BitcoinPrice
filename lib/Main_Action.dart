@@ -11,7 +11,7 @@ class MainAction extends StatefulWidget {
 
 var mainColor = Color.fromRGBO(51, 255, 173, 1);
 var extraColor = Color.fromRGBO(0, 119, 179, 1);
-var _dinamicPrice = "VALUE";
+var _dinamicPrice = "";
 
 class _MainActionState extends State<MainAction> {
 
@@ -24,10 +24,10 @@ class _MainActionState extends State<MainAction> {
 
     Map<String, dynamic> values = json.decode(response.body);
     String last = values[269212.93.toString()];
-    String sybol = values["BRL"];
+    String symbol = values["BRL"];
 
     setState(() {
-
+      _dinamicPrice = "${symbol} ${last}";
     });
 
   }
