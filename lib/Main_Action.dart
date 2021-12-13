@@ -11,7 +11,7 @@ class MainAction extends StatefulWidget {
 
 var mainColor = Color.fromRGBO(51, 255, 173, 1);
 var extraColor = Color.fromRGBO(0, 119, 179, 1);
-var _dinamicPrice = "";
+var _dinamicPrice = "R\$";
 
 class _MainActionState extends State<MainAction> {
 
@@ -23,11 +23,11 @@ class _MainActionState extends State<MainAction> {
     response = await http.get(url);
 
     Map<String, dynamic> values = json.decode(response.body);
-    String last = values[269212.93.toString()];
-    String symbol = values["BRL"];
+    dynamic all = values["BRL"];
+    dynamic last = all["last"];
 
     setState(() {
-      _dinamicPrice = "${symbol} ${last}";
+      _dinamicPrice = "R\$ ${last.toString()}";
     });
 
   }
@@ -64,7 +64,7 @@ class _MainActionState extends State<MainAction> {
                 padding: EdgeInsets.only(top: 14),
                 child: RaisedButton(
                   padding: EdgeInsets.all(16),
-                    onPressed: (){},
+                    onPressed: _getValue,
                   color: extraColor,
                   child: Text(
                     "Atualizar",
