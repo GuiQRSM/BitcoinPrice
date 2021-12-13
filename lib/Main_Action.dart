@@ -20,6 +20,7 @@ void _getValue () async {
 
   response = await http.get(url);
 
+  Map<String, dynamic> values = json.decode(response.body);
 
 }
 
