@@ -10,6 +10,8 @@ class MainAction extends StatefulWidget {
 class _MainActionState extends State<MainAction> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.white,
+    );
   }
 }
