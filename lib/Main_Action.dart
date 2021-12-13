@@ -12,10 +12,12 @@ var mainColor = Color.fromRGBO(51, 255, 173, 1);
 var extraColor = Color.fromRGBO(0, 119, 179, 1);
 var _dinamicPrice = "VALUE";
 
-void _getValue () {
+void _getValue () async {
 
   http.Response response;
   var url = Uri.parse("https://blockchain.info/ticker");
+
+
 
 }
 
