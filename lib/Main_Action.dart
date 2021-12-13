@@ -13,7 +13,18 @@ class _MainActionState extends State<MainAction> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.white70,
+      body: Container(
+        width: double.infinity,
+        child: SingleChildScrollView(
+          padding: EdgeInsets.all(28),
+          child: Column(
+            children: <Widget>[
+
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
