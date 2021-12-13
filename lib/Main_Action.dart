@@ -18,13 +18,14 @@ class _MainActionState extends State<MainAction> {
       body: Container(
         width: double.infinity,
         child: SingleChildScrollView(
-          padding: EdgeInsets.all(28),
+          padding: EdgeInsets.all(32),
           child: Column(
             children: <Widget>[
               Padding(
-                  padding: EdgeInsets.only(top:23),
+                  padding: EdgeInsets.only(top:160,bottom: 150),
                 child: Image.asset(
-                    "",
+                    "img/bitcoin_edit.png",
+                  height: 100,
                 ),
               )
             ],
