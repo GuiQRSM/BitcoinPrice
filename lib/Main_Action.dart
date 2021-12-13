@@ -13,20 +13,25 @@ var mainColor = Color.fromRGBO(51, 255, 173, 1);
 var extraColor = Color.fromRGBO(0, 119, 179, 1);
 var _dinamicPrice = "VALUE";
 
-void _getValue () async {
-
-  http.Response response;
-  var url = Uri.parse("https://blockchain.info/ticker");
-
-  response = await http.get(url);
-
-  Map<String, dynamic> values = json.decode(response.body);
-  String last = values[269212.93.toString()];
-  String sybol = values["BRL"];
-
-}
-
 class _MainActionState extends State<MainAction> {
+
+  void _getValue () async {
+
+    http.Response response;
+    var url = Uri.parse("https://blockchain.info/ticker");
+
+    response = await http.get(url);
+
+    Map<String, dynamic> values = json.decode(response.body);
+    String last = values[269212.93.toString()];
+    String sybol = values["BRL"];
+
+    setState(() {
+
+    });
+
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
