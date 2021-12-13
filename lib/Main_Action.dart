@@ -21,6 +21,8 @@ void _getValue () async {
   response = await http.get(url);
 
   Map<String, dynamic> values = json.decode(response.body);
+  String last = values[269212.93.toString()];
+  String sybol = values["BRL"];
 
 }
 
