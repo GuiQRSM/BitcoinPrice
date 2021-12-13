@@ -17,7 +17,7 @@ void _getValue () async {
   http.Response response;
   var url = Uri.parse("https://blockchain.info/ticker");
 
-
+  response = await http.get(url);
 
 }
 
