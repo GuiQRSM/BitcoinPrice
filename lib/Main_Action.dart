@@ -15,6 +15,7 @@ var _dinamicPrice = "VALUE";
 void _getValue () {
 
   http.Response response;
+  var url = Uri.parse("https://blockchain.info/ticker");
 
 }
 
