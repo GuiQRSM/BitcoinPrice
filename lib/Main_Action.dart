@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+import 'dart:convert';
 
 class MainAction extends StatefulWidget {
 
@@ -18,6 +19,7 @@ void _getValue () async {
   var url = Uri.parse("https://blockchain.info/ticker");
 
   response = await http.get(url);
+
 
 }
 
