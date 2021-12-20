@@ -36,6 +36,7 @@ class _MainActionState extends State<MainAction> {
 
     http.Response response;
     var url2 = Uri.parse("https://blockchain.info/ticker");
+    response = await http.get(url2);
 
   }
 
