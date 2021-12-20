@@ -44,7 +44,12 @@ class _MainActionState extends State<MainAction> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return FutureBuilder<Map>();
+  }
+}
+
+/*
+Scaffold(
       backgroundColor: Colors.white60,
       body: Container(
         width: double.infinity,
@@ -91,5 +96,4 @@ class _MainActionState extends State<MainAction> {
         ),
       ),
     );
-  }
-}
+ */
