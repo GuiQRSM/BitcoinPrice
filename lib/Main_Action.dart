@@ -38,6 +38,8 @@ class _MainActionState extends State<MainAction> {
     var url2 = Uri.parse("https://blockchain.info/ticker");
     response = await http.get(url2);
 
+    return json.decode(response.body);
+
   }
 
   @override
