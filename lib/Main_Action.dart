@@ -32,7 +32,7 @@ class _MainActionState extends State<MainAction> {
 
   }
 
-  void _getPrice () async {
+  Future<Map> _getPrice () async {
 
     http.Response response;
     var url2 = Uri.parse("https://blockchain.info/ticker");
@@ -44,7 +44,9 @@ class _MainActionState extends State<MainAction> {
 
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder<Map>();
+    return FutureBuilder<Map>(
+      future: _getPrice(),
+    );
   }
 }
 
