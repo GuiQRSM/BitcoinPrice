@@ -60,7 +60,7 @@ class _MainActionState extends State<MainAction> {
               _answer = "ERRO ao consultar valores!";
             }else{
               var trueValue = snapshot.data!["BRL"] ["buy"];
-              _answer = "Atual valor de COMPRA: ${trueValue.toString()}";
+              _answer = "R\$${trueValue.toString()}";
             }
         }
 
@@ -106,6 +106,17 @@ class _MainActionState extends State<MainAction> {
                       ),
                     ),
                   ),
+                  Padding(
+                      padding: EdgeInsets.only(top: 50),
+                    child: Text(
+                      "$_answer",
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w700,
+                        color: mainColor,
+                      ),
+                    ),
+                  )
                 ],
               ),
             ),
