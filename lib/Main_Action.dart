@@ -34,6 +34,8 @@ class _MainActionState extends State<MainAction> {
 
   void _getPrice () async {
 
+    http.Response response;
+
   }
 
   @override
