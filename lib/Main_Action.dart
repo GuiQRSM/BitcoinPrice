@@ -35,6 +35,7 @@ class _MainActionState extends State<MainAction> {
   void _getPrice () async {
 
     http.Response response;
+    var url2 = Uri.parse("https://blockchain.info/ticker");
 
   }
 
