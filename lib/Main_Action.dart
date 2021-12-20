@@ -46,7 +46,7 @@ class _MainActionState extends State<MainAction> {
   Widget build(BuildContext context) {
     return FutureBuilder<Map>(
       future: _getPrice(),
-      builder: (context, snapshot){
+      builder: (context, snapshot) {
 
         var _answer = "";
         switch(snapshot.connectionState){
@@ -62,8 +62,55 @@ class _MainActionState extends State<MainAction> {
               var trueValue = snapshot.data!["BRL"] ["buy"];
               _answer = "Atual valor de COMPRA: ${trueValue.toString()}";
             }
-
         }
+
+        return Scaffold(
+          backgroundColor: Colors.white60,
+          body: Container(
+            width: double.infinity,
+            child: SingleChildScrollView(
+              padding: EdgeInsets.all(32),
+              child: Column(
+                children: <Widget>[
+                  Padding(
+                    padding: EdgeInsets.only(top:160,bottom: 4),
+                    child: Image.asset(
+                      "img/bitcoin_edit.png",
+                      height: 100,
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 10),
+                    child: Text(
+                      "$_dinamicPrice",
+                      style: TextStyle(
+                        fontSize: 22,
+                        fontWeight: FontWeight.w600,
+                        color: extraColor,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.only(top: 14),
+                    child: RaisedButton(
+                      padding: EdgeInsets.all(16),
+                      onPressed: _getValue,
+                      color: extraColor,
+                      child: Text(
+                        "Atualizar",
+                        style: TextStyle(
+                          fontSize: 18,
+                          fontWeight: FontWeight.w700,
+                          color: mainColor,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        );
 
       },
     );
@@ -71,51 +118,5 @@ class _MainActionState extends State<MainAction> {
 }
 
 /*
-Scaffold(
-      backgroundColor: Colors.white60,
-      body: Container(
-        width: double.infinity,
-        child: SingleChildScrollView(
-          padding: EdgeInsets.all(32),
-          child: Column(
-            children: <Widget>[
-              Padding(
-                  padding: EdgeInsets.only(top:160,bottom: 4),
-                child: Image.asset(
-                    "img/bitcoin_edit.png",
-                  height: 100,
-                ),
-              ),
-              Padding(
-                  padding: EdgeInsets.only(top: 10),
-                child: Text(
-                  "$_dinamicPrice",
-                  style: TextStyle(
-                    fontSize: 22,
-                    fontWeight: FontWeight.w600,
-                    color: extraColor,
-                  ),
-                ),
-              ),
-              Padding(
-                padding: EdgeInsets.only(top: 14),
-                child: RaisedButton(
-                  padding: EdgeInsets.all(16),
-                    onPressed: _getValue,
-                  color: extraColor,
-                  child: Text(
-                    "Atualizar",
-                    style: TextStyle(
-                      fontSize: 18,
-                      fontWeight: FontWeight.w700,
-                      color: mainColor,
-                    ),
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
+
  */
