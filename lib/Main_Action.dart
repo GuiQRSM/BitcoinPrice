@@ -51,7 +51,17 @@ class _MainActionState extends State<MainAction> {
         var _answer = "";
         switch(snapshot.connectionState){
 
+          case ConnectionState.waiting :
+            _answer = "Aguardando valores...";
+            break;
 
+          case ConnectionState.done :
+            if(snapshot.hasError){
+              _answer = "ERRO ao consultar valores!";
+            }else{
+              var trueValue = snapshot.data!["BRL"] ["buy"];
+              _answer = "Atual valor de COMPRA: ${trueValue.toString()}";
+            }
 
         }
 
