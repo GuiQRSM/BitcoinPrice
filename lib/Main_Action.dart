@@ -48,7 +48,10 @@ class _MainActionState extends State<MainAction> {
       future: _getPrice(),
       builder: (context, snapshot){
 
+        var _answer = "";
         switch(snapshot.connectionState){
+
+
 
         }
 
