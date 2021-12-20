@@ -12,6 +12,7 @@ class MainAction extends StatefulWidget {
 var mainColor = Color.fromRGBO(51, 255, 173, 1);
 var extraColor = Color.fromRGBO(0, 119, 179, 1);
 var _dinamicPrice = "R\$";
+var _receiverText = "";
 
 class _MainActionState extends State<MainAction> {
 
@@ -60,7 +61,7 @@ class _MainActionState extends State<MainAction> {
               _answer = "ERRO ao consultar valores!";
             }else{
               var trueValue = snapshot.data!["BRL"] ["buy"];
-              _answer = "R\$${trueValue.toString()}";
+              _answer = "Preço Atual de Compra: R\$${trueValue.toString()}";
             }
         }
 
@@ -110,13 +111,14 @@ class _MainActionState extends State<MainAction> {
                       padding: EdgeInsets.only(top: 50),
                     child: Text(
                       "$_answer",
+                      textAlign: TextAlign.center,
                       style: TextStyle(
-                        fontSize: 18,
+                        fontSize: 24,
                         fontWeight: FontWeight.w700,
                         color: mainColor,
                       ),
                     ),
-                  )
+                  ),
                 ],
               ),
             ),
